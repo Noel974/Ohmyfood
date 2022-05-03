@@ -16,7 +16,8 @@
   }
   100% {
     content: "";
-    background-color: transparent;
+    background-color: #9356dc;
+    color: #9356dc;
     display: none;
     min-height: 0px;
     position: relative;
@@ -36,6 +37,7 @@
 .txt-loading::after {
   animation: load steps(1, end) 3s;
   animation-fill-mode: forwards;
+  background-color: rgba(238, 237, 237, 0.932);
   color: #9356dc;
   content: "";
   display: flex;
