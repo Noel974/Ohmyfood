@@ -1,2 +1,2 @@
 # ignore les fichier .css
-style/*.css
+./style/*.css
