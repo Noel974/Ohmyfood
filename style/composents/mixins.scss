@@ -124,7 +124,7 @@
   @mixin menu-pictures {
     @for $i from 1 through 4 {
       &__image-#{$i} {
-        background-image: url("../images/restaurants/menu-#{$i}.jpg");
+        background-image: url("../../images/restaurants/menu-#{$i}.jpg");
       }
     }
   }
