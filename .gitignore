@@ -1,3 +1,1 @@
-style/
-    index.css
-    index.css.map
+./style/*.css
