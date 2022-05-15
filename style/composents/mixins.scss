@@ -27,7 +27,7 @@
     text-align: center;
   }
   .txt-loading::after {
-    animation: load steps(1, end) 3s;
+    animation: txt-loading steps(1, end) 3s;
     animation-fill-mode: forwards;
     background-color: rgba(238, 237, 237, 0.932);
     color: #9356dc;
@@ -118,7 +118,7 @@
       height: 4px;
       width: 37px;
       background-color: $color-tertiary;
-    }
+      }
   }
   //picture menu page
   @mixin menu-pictures {

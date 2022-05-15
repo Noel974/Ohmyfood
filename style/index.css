@@ -1,7 +1,7 @@
 /*Outil*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-@keyframes load {
+@keyframes txt-loading {
   0% {
     content: ". . .";
   }
@@ -35,7 +35,7 @@
   }
 }
 .txt-loading::after {
-  animation: load steps(1, end) 3s;
+  animation: txt-loading steps(1, end) 3s;
   animation-fill-mode: forwards;
   background-color: rgba(238, 237, 237, 0.932);
   color: #9356dc;
@@ -50,7 +50,7 @@
   z-index: 3;
 }
 
-/*Loading*/
+/*Animation*/
 /* LOADING SPINNER */
 .loader {
   border-radius: 25px;
@@ -60,6 +60,7 @@
   text-align: center;
 }
 
+/*Animation chek-menu*/
 /*Body*/
 * {
   box-sizing: border-box;
@@ -555,7 +556,15 @@ header {
   margin-right: 0;
 }
 .menu-item:hover .fas {
-  animation: spinner 700ms ease-in-out;
+  animation: quarterspin 0.5s ease-in-out;
+}
+@keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 .order {

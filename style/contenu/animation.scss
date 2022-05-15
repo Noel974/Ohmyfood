@@ -1,0 +1,16 @@
+ /* LOADING SPINNER */
+ .loader {
+    @include txt-loading
+    }
+
+    /*Animation chek-menu*/
+    @mixin quarterspin {
+      @keyframes quarterspin {
+        0% {
+          transform: rotate(-270deg);
+        }
+        100% {
+          transform: rotate(0);
+        }
+      }
+    }

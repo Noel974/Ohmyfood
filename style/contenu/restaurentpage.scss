@@ -118,7 +118,8 @@
           margin-right: 0;
         }
         .fas {
-          animation: spinner 700ms ease-in-out;
+          @include quarterspin;
+            animation: quarterspin 0.5s ease-in-out;      
         }
       }
     }
