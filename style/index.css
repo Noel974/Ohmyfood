@@ -51,6 +51,7 @@
 }
 
 /*Animation*/
+/*Animation*/
 /* LOADING SPINNER */
 .loader {
   border-radius: 25px;
@@ -60,7 +61,6 @@
   text-align: center;
 }
 
-/*Animation*/
 /*Body*/
 * {
   box-sizing: border-box;
