@@ -5,12 +5,14 @@
   @mixin base-shadows-hov {
     box-shadow: 0px 4px 2px 2px darken($color: lightgrey, $amount: 20%);
   }
+
   //zoom scale
   @mixin zoom {
     transform: scale(1.03);
     transition: all 400ms ease-in-out;
   }
-  //gradient purple
+
+  //violet dégradé
   @mixin gradient-btn($opacity: 1, $origin: 0deg) {
     background-image: linear-gradient(
       $origin,
@@ -18,6 +20,7 @@
       rgba(255, 121, 218, $opacity)
     );
   }
+
   //mixin loading spinner
   @mixin txt-loading {
     border-radius: 25px;
@@ -41,7 +44,8 @@
     width: 100%;
     z-index: 3;
   }
-  //btn explorer commander
+
+  //btn explorer
   @mixin btn-purple {
     display: inline-block;
     border-radius: 30px;
@@ -60,7 +64,8 @@
       @include gradient-btn($opacity: 0.85, $origin: 0deg);
     }
   }
-  //mixin icone font awesome
+
+  //mixin icone font génerale
   @mixin font-awesome($font-weight: 400) {
     font-style: normal;
     font-variant: normal;
@@ -69,7 +74,17 @@
     font-family: "Font Awesome 5 Free";
     font-weight: $font-weight;
   }
-  //mixin arrow left return homepage
+
+   //image menu accueil
+   @mixin menu-pictures {
+    @for $i from 1 through 4 {
+      &__image-#{$i} {
+        background-image: url("../images/restaurants/menu-#{$i}.jpg");
+      }
+    }
+  }
+
+  //mixin retour a la page d'accueil 
   @mixin arrow {
     @include font-awesome($font-weight: 900);
     content: "\f060";
@@ -78,7 +93,8 @@
     font-size: 30px;
     margin-left: 30px;
   }
-  //heart
+
+  //coeur 
   @mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
     @include font-awesome($font-weight);
     content: "\f004";
@@ -94,7 +110,8 @@
     opacity: $opacity;
     transition: all 1500ms ease-in-out;
   }
-  //anime heart
+
+  //anime coeur 
   @mixin heart-animation {
     &::before {
       @include heart;
@@ -108,7 +125,18 @@
       transform: translateY(-50%) scale(1.1);
     }
   }
-  //green subtitle
+
+   //apparait menu flex
+   @mixin appear-menu {
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        animation-delay: 800ms * $i;
+      }
+    }
+    animation: appear 1000ms ease-in-out both;
+  }
+
+  //validation chek vert 
   @mixin subtitle {
     &::after {
       content: "";
@@ -120,25 +148,7 @@
       background-color: $color-tertiary;
       }
   }
-  //picture menu page
-  @mixin menu-pictures {
-    @for $i from 1 through 4 {
-      &__image-#{$i} {
-        background-image: url("../images/restaurants/menu-#{$i}.jpg");
-      }
-    }
-  }
-  //appear menu flex
-  @mixin appear-menu {
-    @for $i from 1 through 3 {
-      &:nth-child(#{$i}) {
-        animation-delay: 800ms * $i;
-      }
-    }
-    animation: appear 1000ms ease-in-out both;
-  }
-
-    /*Animation*/
+    //Animation check
     @mixin quarterspin {
       @keyframes quarterspin {
         0% {
@@ -149,3 +159,5 @@
         }
       }
     }
+ 
+ 
